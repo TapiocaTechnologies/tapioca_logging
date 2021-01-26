@@ -1,4 +1,4 @@
-package main
+package tapioca_logging
 
 import (
 	"fmt"
@@ -18,6 +18,3 @@ func Logging(message string){
 	fmt.Println(message)
 }
 
-func main(){
-	Logging("An error has occured")
-}
