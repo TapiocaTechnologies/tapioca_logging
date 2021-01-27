@@ -6,11 +6,11 @@ tapioca_logging is a simple GO module to help with logging to a file.  It uses b
 tapioca_logging can be added directly to your go projects via import:
 
 ```Go
-include (
+import (
     "github.com/TapiocaTechnologies/tapioca_logging"
 )
 ```
-Make sure you are using the most current version [v0.1.3](https://github.com/TapiocaTechnologies/tapioca_logging/releases/tag/v0.1.2) you can change the version you are using in your go.mod file.
+Make sure you are using the most current version [v0.1.3](https://github.com/TapiocaTechnologies/tapioca_logging/releases/tag/v0.1.3) you can change the version you are using in your go.mod file.
 
 
 ## Function / Usage
