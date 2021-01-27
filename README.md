@@ -38,7 +38,7 @@ errs := errors.New("Error")
 tapioca_logging.LoggingError(errs)
 ```
 
-### Logfile output
+## Logfile output
 
 ```
 2021/01/26 18:24:24 Welcome to tapioca_logging
