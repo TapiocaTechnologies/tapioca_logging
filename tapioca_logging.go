@@ -8,7 +8,9 @@ import (
 )
 var file_name = ""
 func SetLogFile(file string){
+
 	file_name = file
+	
 }
 func Logging(message string){
 	
