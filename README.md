@@ -10,7 +10,7 @@ import (
     "github.com/TapiocaTechnologies/tapioca_logging"
 )
 ```
-Make sure you are using the most current version [v0.1.3](https://github.com/TapiocaTechnologies/tapioca_logging/releases/tag/v0.1.3) you can change the version you are using in your go.mod file.
+Make sure you are using the most current version [v0.1.4](https://github.com/TapiocaTechnologies/tapioca_logging/releases/tag/v0.1.4) you can change the version you are using in your go.mod file.
 
 
 ## Function / Usage
@@ -24,26 +24,41 @@ tapioca_logging.SetLogFile("testlogfile.log")
 tapioca_logging.SetLogFile("c:\dev\testlogfile.log")
 ```
 
-**Logging(message string):** This is a general function that allows you to write a string to a file.
+**Logging(message string):** This is a general function that allows you to write a string to a file. Inserts log message with [GENERAL] tag before message.
 
 ```
 message := "Welcome to tapioca_logging"
 tapioca_logging.Logging(message)
 ```
 
-**LoggingError(err error):** This is a general function that allows you to write an error to a file.
+**LoggingError(err error):** This is a general function that allows you to write an error to a file. Inserts log message with [ERROR] tag before message.
 
 ```
 errs := errors.New("Error")
 tapioca_logging.LoggingError(errs)
 ```
 
+**LoggingNetwork(message string):**  Use this function if you need to log anything that has to do with networking. Inserts log message with [NETWORK] tag before message.
+
+```
+message := "Client successfully connected"
+tapioca_logging.LoggingNetwork(message)
+```
+
+**LoggingNetwork(err error):**  Use this function if you need to log anything that has to do with networking errors. Inserts log message with [NETWORK] [ERROR] tag before message.
+
+```
+errs := errors.New("Client failed to connect")
+tapioca_logging.LoggingNetworkError(errs)
+```
+
 ## Logfile output
 
 ```
-2021/01/26 18:24:24 Welcome to tapioca_logging
-2021/01/26 18:24:24 Error
-2021/01/26 18:32:18 Error
+2021/01/26 19:01:46 [GENERAL] Welcome to tapioca_logging
+2021/01/26 19:01:46 [ERROR] Error
+2021/01/26 19:01:46 [NETWORK] Client successfully connected
+2021/01/26 19:01:46 [NETWORK] [Error] Client failed to connect
 ```
 
 
